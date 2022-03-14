@@ -1,0 +1,33 @@
+{
+  "name": "minify-all-cli",
+  "version": "1.0.0",
+  "description": "Minify All JS, CSS and HTML files in a folder by using UglifyJS, CSSNano and HTMLMinifier",
+  "main": "./bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadiagaurang/minify-all.git"
+  },
+  "keywords": [
+    "Minify",
+	"Minify All",
+	"Minify All JS",
+	"Minify All CSS",
+	"Minify All HTML",
+    "Compress",
+    "uglifyjs",
+    "cssnano",
+    "html-minifier"
+  ],
+  "author": "Gaurang Jadia",
+  "license": "MIT",
+  "bin": {
+    "minify-all-cli": "./bin/index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/jadiagaurang/minify-all-cli/issues"
+  },
+  "homepage": "https://github.com/jadiagaurang/minify-all-cli#readme"
+}
