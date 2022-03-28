@@ -2,9 +2,12 @@
   "name": "minify-all-cli",
   "version": "1.0.0",
   "description": "Minify All JS, CSS and HTML files in a folder by using UglifyJS, CSSNano and HTMLMinifier",
-  "main": "./bin/index.js",
+  "main": "bin/minify-all-cli.js",
+  "bin": {
+    "minify-all": "./bin/minify-all-cli.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/compress.js && node test/mocha.js"
   },
   "repository": {
     "type": "git",
@@ -12,10 +15,10 @@
   },
   "keywords": [
     "Minify",
-	"Minify All",
-	"Minify All JS",
-	"Minify All CSS",
-	"Minify All HTML",
+    "Minify All",
+    "Minify All JS",
+    "Minify All CSS",
+    "Minify All HTML",
     "Compress",
     "uglifyjs",
     "cssnano",
@@ -23,8 +26,13 @@
   ],
   "author": "Gaurang Jadia",
   "license": "MIT",
-  "bin": {
-    "minify-all-cli": "./bin/index.js"
+  "dependencies": {
+    "cssnano": "^5.1.5",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "uglifyjs": "^2.4.11",
+    "yargs": "^17.4.0"
   },
   "bugs": {
     "url": "https://github.com/jadiagaurang/minify-all-cli/issues"
