@@ -16,6 +16,7 @@
   "keywords": [
     "Minify",
     "Minify All",
+    "Minify All CLI",
     "Minify All JS",
     "Minify All CSS",
     "Minify All HTML",
@@ -30,7 +31,6 @@
     "cssnano": "^5.1.5",
     "html-minifier": "^4.0.0",
     "postcss": "^8.4.12",
-    "postcss-cli": "^9.1.0",
     "uglifyjs": "^2.4.11",
     "underscore": "^1.13.2",
     "yargs": "^17.4.0"
