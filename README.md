@@ -1,6 +1,6 @@
 # Minify All CLI
 
-[![Node.js CI](https://github.com/jadiagaurang/minify-all-cli/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jadiagaurang/minify-all-cli/actions/workflows/node.js.yml)
+[![Node.js CI](https://github.com/jadiagaurang/minify-all-cli/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jadiagaurang/minify-all-cli/actions/workflows/npm-publish.yml)
 
 Minify All JS, CSS and HTML files in a folder by using UglifyJS, CSSNano and HTMLMinifier.
 
