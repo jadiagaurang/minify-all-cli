@@ -13,7 +13,6 @@ const cliOptions = yargs
  .option("m", { alias: "skipFileMasks", describe: "Partial Filder Path to skip it over", type: "string", demandOption: false })
  .option("i", { alias: "ignoreFileMasks", describe: "Partial Filder Path to ignore it over", type: "string", demandOption: false })
  .option("f", { alias: "configFile", describe: "Specifies a json configuration file for the UglifyJS, CSSNano and HTML Minifier module", type: "string", demandOption: false })
- .option("v", { alias: "verbose", describe: "Set output to verbose messages.", type: "boolean", demandOption: false })
  .option("l", { alias: "logLevel", describe: "Set log level to print warn, log, error, fatal messages", type: "string", demandOption: false })
  .argv;
  
@@ -24,8 +23,7 @@ const cliOptions = yargs
     skipFileMasks: cliOptions.skipFileMasks || cliOptions.m || "",
     ignoreFileMasks: cliOptions.ignoreFileMasks || cliOptions.i || "",
     configFile: cliOptions.configFile || cliOptions.f || null,
-    verbose: cliOptions.verbose || cliOptions.v || "info",
     logLevel: cliOptions.logLevel || "info"
  };
  var objMinifyAll = new MinifyAllCLI(cliOptions.s, cliOptions.d, options);
- objMinifyAll.doCompression();
+ objMinifyAll.process();
