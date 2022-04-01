@@ -1,6 +1,6 @@
 {
   "name": "minify-all-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Minify All JS, CSS and HTML files in a folder by using UglifyJS, CSSNano and HTMLMinifier",
   "main": "bin/minify-all-cli.js",
   "bin": {
