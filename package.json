@@ -30,9 +30,10 @@
   "dependencies": {
     "cssnano": "^5.1.5",
     "html-minifier": "^4.0.0",
+    "parallel-each": "^1.1.7",
     "postcss": "^8.4.12",
-    "underscore": "^1.13.2",
     "uglify-js": "^3.15.2",
+    "underscore": "^1.13.2",
     "winston": "^3.6.0",
     "yargs": "^17.4.0"
   },
