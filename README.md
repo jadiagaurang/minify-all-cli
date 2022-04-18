@@ -4,7 +4,9 @@
 
 [![NPM Downloads](https://img.shields.io/npm/dw/minify-all-cli)](https://www.npmjs.com/package/minify-all-cli)
 
-Minify All JS, CSS and HTML files in a folder by using UglifyJS, CSSNano and HTMLMinifier with an option to gzip all the files as well. Package also supports processCount to set maximum degree of parallelism.
+Minify All JS, CSS and HTML files in a folder by using UglifyJS, CSSNano and HTMLMinifier with an option to gzip all the files as well.
+
+Package also supports processCount to set maximum degree of parallelism.
 
 ## Installation
 
@@ -24,20 +26,21 @@ minify-all-cli -s [source folder] -d [destination folder] [options]
 Usage: -s <source> -d <destination>
 
 Options:
-      --help             Show help                                     [boolean]
-      --version          Show version number                           [boolean]
-  -j, --skipJS           Should minify JS the file or skip it?         [boolean]
-  -c, --skipCSS          Should minify CSS the file or skip it?        [boolean]
-  -h, --skipHTML         Should minify HTML the file or skip it?       [boolean]
-  -g, --doGzip           Should gzip the file or skip it?              [boolean]
-  -m, --skipFileMasks    Partial Filder Path to skip it over            [string]
-  -i, --ignoreFileMasks  Partial Filder Path to ignore it over          [string]
-  -f, --configFile       Specifies a json configuration file for the 
-                         UglifyJS, CSSNano and HTML Minifier module     [string]
-  -l, --logLevel         Set log level to print warn, log, error, 
-                         fatal messages                                 [string]
-  -p, --processCount     Specifies process count to set maximum degree 
-                         of parallelism                                 [number]
+      --help                Show help                                     [boolean]
+      --version             Show version number                           [boolean]
+  -j, --skipJS              Should minify JS the file or skip it?         [boolean]
+  -c, --skipCSS             Should minify CSS the file or skip it?        [boolean]
+  -h, --skipHTML            Should minify HTML the file or skip it?       [boolean]
+  -g, --doGzip              Should gzip the file or skip it?              [boolean]
+  -m, --skipFileMasks       Partial Filder Path to skip it over            [string]
+  -e, --skipFileExtensions  File Extensions to skip it over                 [array]
+  -i, --ignoreFileMasks     Partial Filder Path to ignore it over          [string]
+  -f, --configFile          Specifies a json configuration file for the 
+                            UglifyJS, CSSNano and HTML Minifier module     [string]
+  -l, --logLevel            Set log level to print warn, log, error, 
+                            fatal messages                                 [string]
+  -p, --processCount        Specifies process count to set maximum degree 
+                            of parallelism                                 [number]
 ```
 
 ## CLI Example
@@ -45,13 +48,13 @@ Options:
 ### Prod
 
 ```bash
-npx minify-all-cli -s "/home/ubuntu/source" -d "/home/ubuntu/compressed" --logLevel=info
+npx minify-all-cli -s "/home/ubuntu/source" -d "/home/ubuntu/compressed" --skipFileExtensions=.mp3,.mp4 --logLevel=info
 ```
 
 ### Local
 
 ```bash
-node . -s "/home/ubuntu/source" -d "/home/ubuntu/compressed" --logLevel=info
+node . -s "/home/ubuntu/source" -d "/home/ubuntu/compressed" --skipFileExtensions=.mp3,.mp4 --logLevel=info
 ```
 
 ## License
