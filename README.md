@@ -48,13 +48,13 @@ Options:
 ### Prod
 
 ```bash
-npx minify-all-cli -s "/home/ubuntu/source" -d "/home/ubuntu/compressed" --skipFileExtensions=.mp3,.mp4 --logLevel=info
+npx minify-all-cli -s "/home/ubuntu/source" -d "/home/ubuntu/compressed" --skipFileExtensions=.mp3 --skipFileExtensions=.mp4 --logLevel=warn
 ```
 
 ### Local
 
 ```bash
-node . -s "/home/ubuntu/source" -d "/home/ubuntu/compressed" --skipFileExtensions=.mp3,.mp4 --logLevel=info
+node . -s "/home/ubuntu/source" -d "/home/ubuntu/compressed" --skipFileExtensions=.mp3 --skipFileExtensions=.mp4 --logLevel=info
 ```
 
 ## License
