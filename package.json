@@ -7,7 +7,7 @@
     "minify-all": "./bin/minify-all-cli.js"
   },
   "scripts": {
-    "test": "echo \"Info: no test specified\" && exit 0"
+    "test": "mocha --timeout 90000 tests/*.js --exit"
   },
   "repository": {
     "type": "git",
@@ -42,5 +42,10 @@
   "bugs": {
     "url": "https://github.com/jadiagaurang/minify-all-cli/issues"
   },
-  "homepage": "https://github.com/jadiagaurang/minify-all-cli#readme"
+  "homepage": "https://github.com/jadiagaurang/minify-all-cli#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "concat-stream": "^2.0.0",
+    "mocha": "^10.0.0"
+  }
 }
