@@ -1,6 +1,7 @@
 # Minify All CLI
 
-[![Node.js CI](https://github.com/jadiagaurang/minify-all-cli/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jadiagaurang/minify-all-cli/actions/workflows/npm-publish.yml)
+[![Node.js CI](https://github.com/jadiagaurang/minify-all-cli/actions/workflows/node.js.yml/badge.svg)](https://github.com/jadiagaurang/minify-all-cli/actions/workflows/node.js.yml)
+[![Node.js Package](https://github.com/jadiagaurang/minify-all-cli/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jadiagaurang/minify-all-cli/actions/workflows/npm-publish.yml)
 [![NPM Downloads](https://img.shields.io/npm/dw/minify-all-cli)](https://www.npmjs.com/package/minify-all-cli)
 
 Minify All JS, CSS and HTML files in a folder by using UglifyJS, CSSNano and HTMLMinifier with an option to gzip all the files as well.
