@@ -25,21 +25,25 @@ minify-all-cli -s [source folder] -d [destination folder] [options]
 Usage: -s <source> -d <destination>
 
 Options:
-      --help                Show help                                     [boolean]
-      --version             Show version number                           [boolean]
-  -j, --skipJS              Should minify JS the file or skip it?         [boolean]
-  -c, --skipCSS             Should minify CSS the file or skip it?        [boolean]
-  -h, --skipHTML            Should minify HTML the file or skip it?       [boolean]
-  -g, --doGzip              Should gzip the file or skip it?              [boolean]
-  -m, --skipFileMasks       Partial Filder Path to skip it over            [string]
+      --help                Show help                                       [boolean]
+      --version             Show version number                             [boolean]
+  -j, --skipJS              Should minify JavaScript the file or skip it?   [boolean]
+  -c, --skipCSS             Should minify CSS the file or skip it?          [boolean]
+  -h, --skipHTML            Should minify HTML the file or skip it?         [boolean]
+  -g, --doGzip              Should gzip the file or skip it?                [boolean]
+  -x, --jsCompressor        Which JavaScript mangler/compressor to use for
+                            minification? Default: uglifyjs                 [string]
+  -m, --skipFileMasks       Partial Filder Path to skip minification        [array]
   -e, --skipFileExtensions  File Extensions to skip it over                 [array]
-  -i, --ignoreFileMasks     Partial Filder Path to ignore it over          [string]
-  -f, --configFile          Specifies a json configuration file for the 
-                            UglifyJS, CSSNano and HTML Minifier module     [string]
-  -l, --logLevel            Set log level to print warn, log, error, 
-                            fatal messages                                 [string]
-  -p, --processCount        Specifies process count to set maximum degree 
-                            of parallelism                                 [number]
+  -i, --ignoreFileMasks     Partial Filder Path to ignore minification and
+                            copy to destination                             [array]
+  -f, --configFile          Specifies a json configuration file for the
+                            UglifyJS/terser, CSSNano and HTML Minifier 
+                            module                                          [string]
+  -l, --logLevel            Set log level to print warn, log, error, fatal
+                            messages                                        [string]
+  -p, --processCount        Specifies process count to set maximum degree
+                            of parallelism                                  [number]
 ```
 
 ## CLI Example
@@ -47,13 +51,19 @@ Options:
 ### Prod
 
 ```bash
-npx minify-all-cli -s "/home/ubuntu/source" -d "/home/ubuntu/compressed" --skipFileExtensions=.mp3 --skipFileExtensions=.mp4 --logLevel=warn
+npx minify-all-cli \
+-s "/home/ubuntu/source" -d "/home/ubuntu/compressed" \
+--skipFileExtensions=.mp3 --skipFileExtensions=.mp4 \
+--logLevel=warn
 ```
 
 ### Local
 
 ```bash
-node . -s "/home/ubuntu/source" -d "/home/ubuntu/compressed" --skipFileExtensions=.mp3 --skipFileExtensions=.mp4 --logLevel=info
+node . \
+-s "./tests/asserts" -d "./tests/asserts_compressed" \
+--skipFileExtensions=.mp3 --skipFileExtensions=.mp4 \
+--logLevel=info
 ```
 
 ## License
