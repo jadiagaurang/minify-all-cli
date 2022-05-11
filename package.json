@@ -7,7 +7,8 @@
     "minify-all": "./bin/minify-all-cli.js"
   },
   "scripts": {
-    "test": "mocha --timeout 90000 tests/**/*.js --exit --grep"
+    "test": "mocha --timeout 90000 tests/**/*.js --exit",
+    "test-single": "mocha --timeout 90000 tests/**/*.js --exit --grep"
   },
   "repository": {
     "type": "git",

@@ -3,9 +3,13 @@
 [![Node.js CI](https://github.com/jadiagaurang/minify-all-cli/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jadiagaurang/minify-all-cli/actions/workflows/npm-publish.yml)
 [![NPM Downloads](https://img.shields.io/npm/dw/minify-all-cli)](https://www.npmjs.com/package/minify-all-cli)
 
-Minify All JS, CSS and HTML files in a folder by using UglifyJS, CSSNano and HTMLMinifier with an option to gzip all the files as well.
+Minify All JS, CSS and HTML files in a folder by using [UglifyJS](https://github.com/mishoo/UglifyJS), [CSSNano](https://github.com/cssnano/cssnano) and [HTMLMinifier](https://github.com/kangax/html-minifier) with an option to gzip all the files as well.
 
 Package also supports processCount to set maximum degree of parallelism.
+
+## Motivation
+
+Google PageSpeed Insights suggests to [Minify Resources (HTML, CSS, and JavaScript)](https://developers.google.com/speed/docs/insights/MinifyResources) to boost web page's loading speed.
 
 ## Installation
 
@@ -48,8 +52,6 @@ Options:
 
 ## CLI Example
 
-### Prod
-
 ```bash
 npx minify-all-cli \
 -s "/home/ubuntu/source" -d "/home/ubuntu/compressed" \
@@ -57,14 +59,7 @@ npx minify-all-cli \
 --logLevel=warn
 ```
 
-### Local
-
-```bash
-node . \
--s "./tests/asserts" -d "./tests/asserts_compressed" \
---skipFileExtensions=.mp3 --skipFileExtensions=.mp4 \
---logLevel=info
-```
+All other examples are available [here](https://github.com/jadiagaurang/minify-all-cli/tree/main/tests).
 
 ## License
 
